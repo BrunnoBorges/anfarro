@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "anfaro": {
+    "anfarro": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/anfaro",
+            "outputPath": "dist/anfarro",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -43,7 +46,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -66,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "anfaro:build"
+            "browserTarget": "anfarro:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "anfaro:build:production"
+              "browserTarget": "anfarro:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "anfaro:build"
+            "browserTarget": "anfarro:build"
           }
         },
         "test": {
@@ -114,15 +116,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "anfaro:serve"
+            "devServerTarget": "anfarro:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "anfaro:serve:production"
+              "devServerTarget": "anfarro:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "anfaro"
+  "defaultProject": "anfarro"
 }
