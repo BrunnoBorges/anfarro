@@ -1,0 +1,22 @@
+@import '../../../../scss/colors.scss';
+
+p {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.picsum-img-wrapper {
+    width: 50rem;
+    margin: auto;
+}
+
+.img{
+    width: 100%;
+    padding-top: 2rem;
+    height: 40rem;
+    border-radius: 5px;
+    margin: auto;
+    background-repeat: no-repeat;
+} 
+
+
