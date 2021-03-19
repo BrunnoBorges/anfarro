@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.images = [
-      '../../../../assets/img/Anfarro.jpg',
-      '../../../../assets/img/Anfarro-1.jpg',
-      '../../../../assets/img/Anfarro-2.jpg'
+      '../../../../assets/img/home/Anfarro.jpg',
+      '../../../../assets/img/home/Anfarro-1.jpg',
+      '../../../../assets/img/home/Anfarro-2.jpg'
     ]
    }
 
