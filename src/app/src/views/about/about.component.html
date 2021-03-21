@@ -1,20 +1,29 @@
 <div class="container">
+  <div class="column">
     <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
+      <div class="card custom-card">
+        <div class="card-body card-image">
+            <img [src]="images[0]" alt="Random first slide" class="img" />
         </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
+        <div class="card-body card-title">
+          <h5 class="title">QUEM SOMOS</h5>
+          <p class="card-text"> 
+            Este é um ótimo espaço para escrever um texto longo sobre a sua empresa e seus serviços. 
+            Você pode usar esse espaço para detalhar a sua empresa.
+          </p>
         </div>
+      </div>
     </div>
+  
+    <div class="row">
+      <div class="card custom-card">
+        <div class="card-body card-title">
+          <h1>Titulo especial para chamar a atenção do usuário</h1>
+        </div>
+        <div class="card-body card-image">
+            <img [src]="images[1]" alt="Random first slide" class="img" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
