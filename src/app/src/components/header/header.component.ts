@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   
   faPinterest = faPinterest;
   faInstagram = faInstagram;
+  faWhatsapp = faWhatsapp;
 
   constructor() {
 
