@@ -1,0 +1,59 @@
+@import '../../../../scss/colors.scss';
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.container-contact {
+    position: relative;
+    display: flex;
+    padding-top: 2vw;
+    height: 40rem;
+    justify-content: center;
+    align-items: center;
+  .contact-details {
+
+    .details {
+      padding: 0;
+      height: 7rem;
+      p {
+        color: $default-header;
+        font-weight: 600;
+      }
+      label {
+        color: black;
+        font-weight: 100;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .form {
+    margin-top: 1vw;
+    label {
+        font-size: 0.75rem;
+    }
+  }
+
+}
+
+h5 {
+    color: $default-header;
+}
+
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .centered{
+      h2 {
+        font-size: 24px;
+      }
+
+      label {
+        font-weight: 400 !important;
+      }
+  }
+}
