@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./among-us.component.scss']
 })
 export class AmongUsComponent implements OnInit {
+  images: string[];
 
-  constructor() { }
+
+  constructor() {
+    this.images = [
+      '../../../../assets/img/among-us/mockup.jpg',
+    ]
+   }
 
   ngOnInit(): void {
   }
