@@ -1,0 +1,103 @@
+@import '../../../../scss/colors.scss';
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.MainContainer {
+  perspective: 2px;
+  transform-style: preserve-3d;
+}
+
+.ContentContainerBlue {
+  position: relative;
+  display: block;
+
+  .container-activity {
+    .container .centered {
+        margin: 0 auto !important;
+        float: none !important;
+    
+        h4 {
+          color: $default-buttonAlternative;
+          font-weight: 100;
+          padding: 2rem 0;
+        }
+      }
+  }
+}
+.container-contact{
+  position: relative;
+  display: block;
+  padding-top: 2vw;
+  .contact-details {
+
+    .details {
+      padding: 0;
+      height: 7rem;
+      p {
+        color: $default-header;
+        font-weight: 600;
+      }
+      label {
+        color: black;
+        font-weight: 100;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .form {
+    margin-top: 1vw;
+    label {
+        font-size: 0.75rem;
+    }
+  }
+  .container-button {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+        background-color: $default-buttonAlternative;
+        border: $default-buttonAlternative;
+        &:hover {
+            background-color: $default-button;
+            border: $default-button;
+        }
+    }
+  }
+}
+
+h5 {
+    color: $default-header;
+}
+
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .img {
+    height: 40vh;
+  }
+
+  .ParallaxContainer {
+    transform: translateZ(0px) scale(1);
+  }
+  .container-activity .community .community-description .description {
+    padding: 1rem 0;
+  }
+  .container-community {
+    height: 70vh;
+  }
+  .centered{
+      h2 {
+        font-size: 24px;
+      }
+
+      label {
+        font-weight: 400 !important;
+      }
+  }
+}

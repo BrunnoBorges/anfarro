@@ -1,1 +1,118 @@
-<p>contact works!</p>
+<div class="MainContainer">
+
+  <section class="ContentContainerBlue">
+    <div class="container-activity">
+      <div class="container">
+        <div class="col-md-10 col-xs-12 centered">
+          <h4>
+           Estamos aqui para que você tenha uma ótima espexiência na anfarrô!
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-contact">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-md-4 contact-details">
+          <div class="details">
+            <p>Anfarrô</p>
+            <label> Rua 136, 999, Sl999 Ed. New York, Setor Sul</label>
+          </div>
+          <div class="details">
+            <p>Telefone</p>
+            <label>(62) 99999 9999</label>
+          </div>
+          <div class="details">
+            <p>Email</p>
+            <label>anfarro.loc@gmail.com</label>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h5>Se prefereir, deixe uma menssagem</h5>
+          <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome" [ngClass]="{ 'is-invalid': submitted && errorContact.nome.errors }"  />
+                <div *ngIf="submitted && errorContact.nome.errors" class="invalid-feedback" >
+                  <div *ngIf="errorContact.nome.errors.required">
+                    O campo nome e obrigatorio
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email </label>
+                <input type="email" class="form-control" formControlName="email" id="email" placeholder="nome@email.com" [ngClass]="{ 'is-invalid': submitted && errorContact.email.errors }" />
+                <div
+                  *ngIf="submitted && errorContact.email.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="errorContact.email.errors.required">
+                    O campo email e obrigatorio
+                  </div>
+                  <div *ngIf="errorContact.email.errors.email">
+                    Digite um Email válido
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="telefone">Telefone</label>
+                <input type="tel" class="form-control" formControlName="telefone" id="telefone" placeholder="Telefone" [ngClass]="{ 'is-invalid': submitted && errorContact.telefone.errors }" mask="(00) 00000-0000 || (00) 0000-0000"/>
+                <div *ngIf="submitted && errorContact.telefone.errors" class="invalid-feedback" >
+                  <div *ngIf="errorContact.telefone.errors.minLength">
+                    O campo telefone deve ter no minimo 8 caracteres
+                  </div>
+                  <div *ngIf="errorContact.telefone.errors.maxLength">
+                    O campo telefone pode ter no maximo 15 caracteres
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="assunto">Assunto</label>
+                <input type="text" class="form-control" formControlName="assunto" id="assunto" placeholder="Assunto" [ngClass]="{'is-invalid': submitted && errorContact.assunto.errors }" />
+                <div *ngIf="submitted && errorContact.assunto.errors" class="invalid-feedback">
+                  <div *ngIf="errorContact.assunto.errors.required">
+                    O campo assunto e obrigatorio
+                  </div>
+                  <div *ngIf="errorContact.assunto.errors.maxLength">
+                    Digete no maximo 50 caracteres neste campo
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  id="mensagem"
+                  formControlName="mensagem"
+                  [ngClass]="{
+                    'is-invalid': submitted && errorContact.mensagem.errors
+                  }"
+                >
+                </textarea>
+                <div
+                  *ngIf="submitted && errorContact.mensagem.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="errorContact.mensagem.errors.required">
+                    O campo assunto e obrigatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row container-button">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
