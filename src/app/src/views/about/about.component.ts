@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   constructor() {
     this.images = [
       '../../../../assets/img/about/Imagem.png',
-      '../../../../assets/img/about/Imagem2.png',
+      '../../../../assets/img/home/Anfarro-1.jpg',
     ]
    }
 
